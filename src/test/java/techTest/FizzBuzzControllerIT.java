@@ -33,11 +33,11 @@ public class FizzBuzzControllerIT {
     }
 
     @Test
-    public void fizzBuzzControllerIT_GET_pathVariable_ShouldReturnValidContent() throws Exception {
+    public void fizzBuzzControllerIT_GET_pathVariable_ShouldReturnValidContent()  {
         ResponseEntity<String> response = template.getForEntity(base.toString() + "/3",
                 String.class);
         assertThat(response.getBody(), equalTo("{\"content\":\"Fizz\"}"));
     }
 
-    // other tests similar to unit tests to be added
+    // other tests to validate other input conditions to be added
 }
